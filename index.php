@@ -3,8 +3,8 @@
  * @Author: Elijah
  * @Date: 2022-02-05 02:21:19
  * @LastEditors: Elijah
- * @LastEditTime: 2022-02-05 03:02:13
- * @FilePath: \timemail.ce1estial.tech\index.php
+ * @LastEditTime: 2022-02-05 21:22:06
+ * @FilePath: /TimeMail/index.php
  */
 require_once "config.php";
 if (!IF_SET) {

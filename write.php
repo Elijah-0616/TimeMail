@@ -1,11 +1,12 @@
-<?php require_once './header.php'; ?>
-    /*
-    * @Author: Elijah
-    * @Date: 2022-02-05 02:21:18
-    * @LastEditors: Elijah
-    * @LastEditTime: 2022-02-05 03:04:32
-    * @FilePath: \timemail.ce1estial.tech\write.php
-    */
+<?php 
+/*
+ * @Author: Elijah
+ * @Date: 2022-02-05 02:21:19
+ * @LastEditors: Elijah
+ * @LastEditTime: 2022-02-06 02:13:27
+ * @FilePath: /TimeMail/write.php
+ */
+require_once './header.php'; ?>
     <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/jodit/3.11.2/jodit.es2018.min.css"
@@ -37,14 +38,25 @@
     </div>
 
     <script>
-        // Jodit.make('#content', {
-        // language: 'zh_cn',
+        Jodit.make('#content', {
+        language: 'zh_cn',
+        // uploader: {
+        //     url: 'https://img.ce1estial.tech',
+        //     method: 'POST',
+        //     imagesExtensions: [
+        //         "jpg", 
+        //         "png",
+        //         "gif",
+        //         "jpeg"
+        //     ],
+
+        // },
         // filebrowser: {
         // 			ajax: {
-        // 				url: 'https://xdsoft.net/jodit/connector/index.php'
+        // 				url: 'https://img.ce1estial.tech/index.php'
         // 			}
         // }
-        // });
+        });
     </script>
     <div class="mdui-typo">
         <blockquote>

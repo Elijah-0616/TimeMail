@@ -1,12 +1,5 @@
 <!DOCTYPE html>
-<!--
-xcsoft版权所有 | 盗版必究
-http://blog.xsot.cn
-V2.2
-2020/01/26
-V2.3_beta20200823
-2020/08/23
--->
+
 <?php require_once "config.php"; ?>
 <html>
 <head>
@@ -44,7 +37,9 @@ V2.3_beta20200823
 </head>
 <!-- header baota-->
 <header class="mdui-appbar mdui-appbar-fixed">
-    <body oncontextmenu="return false" onselectstart="return false" oncopy="return false"
+    <!-- oncontextmenu="return true" onselectstart="return true" oncopy="return true" 
+    三个参数分别为右键菜单，左键选择，复制 -->
+    <body oncontextmenu="return true" onselectstart="return true" oncopy="return true"
           background="https://cdn.jsdelivr.net/gh/soxft/cdn@latest/time/img/background.png"
           class="mdui-drawer-body-left mdui-appbar-with-toolbar">
     <div class="mdui-toolbar mdui-color-theme">

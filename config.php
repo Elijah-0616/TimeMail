@@ -1,8 +1,10 @@
 <?php
 define('DATABASE', array("localhost", "timemail", "txy0616", "timemail"));
 //数据库配置  服务器/数据库用户名/数据库密码/数据库名称
-
-define("URL", "https://timemail.ce1estial.tech/");
+// 生产环境地址
+// define("URL", "https://timemail.ce1estial.tech/");
+//测试环境
+define("url", "http://192.168.64.130/");
 //网址 记住必须以/结尾
 
 define("TITLE", "TimeMail - 给未来写封信");
