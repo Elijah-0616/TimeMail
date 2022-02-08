@@ -1,52 +1,65 @@
 <!DOCTYPE html>
-
-<?php require_once "config.php"; ?>
+<?php require_once "config.php";
+/*
+ * @Author: Elijah
+ * @Date: 2022-02-08 21:00:37
+ * @LastEditors: Elijah
+ * @LastEditTime: 2022-02-08 21:00:37
+ * @FilePath: /TimeMail/header.php
+ * @Description: 
+ * 山水一程，已是三生有幸！
+ * Copyright (c) 2022 by Elijah, All Rights Reserved. 
+ * @description: 
+ * @param: 
+ * @return: 
+ */
+?>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
-    <meta http-equiv="Cache-Control" content="no-siteapp"/>
-    <meta name="description" content="TimeMail时光邮局 - 给未来写封信"/>
-    <meta name="keywords" content="TimeMail,时光邮局,给未来写封信,xcsoft,星辰日记,php,xc-blog,soxft"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="description" content="TimeMail时光邮局 - 给未来写封信" />
+    <meta name="keywords" content="TimeMail,时光邮局,给未来写封信,xcsoft,星辰日记,php,xc-blog,soxft" />
     <title><?php echo TITLE ?></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/soxft/cdn@latest/mdui/css/mdui.min.css">
     <script src="https://cdn.jsdelivr.net/gh/soxft/cdn@latest/mdui/js/mdui.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon"
-          href="https://cdn.jsdelivr.net/gh/soxft/cdn@latest/time/img/favicon.ico" media="screen"/>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159315608-3"></script>
+        href="https://cdn.jsdelivr.net/gh/soxft/cdn@latest/time/img/favicon.ico" media="screen" />
     <script>
-        window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+    function gtag() {
+        dataLayer.push(arguments);
+    }
 
-        gtag('js', new Date());
-        gtag('config', 'UA-159315608-3');
+    gtag('js', new Date());
+    gtag('config', 'UA-159315608-3');
     </script>
     <style>
-        a {
-            text-decoration: none
-        }
+    a {
+        text-decoration: none
+    }
 
-        a:hover {
-            text-decoration: none
-        }
+    a:hover {
+        text-decoration: none
+    }
     </style>
 </head>
 <!-- header baota-->
 <header class="mdui-appbar mdui-appbar-fixed">
     <!-- oncontextmenu="return true" onselectstart="return true" oncopy="return true" 
     三个参数分别为右键菜单，左键选择，复制 -->
+
     <body oncontextmenu="return true" onselectstart="return true" oncopy="return true"
-          background="https://cdn.jsdelivr.net/gh/soxft/cdn@latest/time/img/background.png"
-          class="mdui-drawer-body-left mdui-appbar-with-toolbar">
-    <div class="mdui-toolbar mdui-color-theme">
-      <span class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#main-drawer'}">
-        <i class="mdui-icon material-icons">menu</i>
-      </span>
-        <a href="" class="mdui-typo-title">TimeMail</a>
+        background="https://cdn.jsdelivr.net/gh/soxft/cdn@latest/time/img/background.png"
+        class="mdui-drawer-body-left mdui-appbar-with-toolbar">
+        <div class="mdui-toolbar mdui-color-theme">
+            <span class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#main-drawer'}">
+                <i class="mdui-icon material-icons">menu</i>
+            </span>
+            <a href="" class="mdui-typo-title">TimeMail</a>
 </header>
 <div class="mdui-drawer" id="main-drawer">
     <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 68px;">
@@ -80,4 +93,4 @@
         </div>
     </div>
 </div>
-<br/>
+<br />

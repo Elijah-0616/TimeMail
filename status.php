@@ -76,28 +76,28 @@ $status = new status($conn);
 $row = new Row($conns);
 
 ?>
-    <div class="mdui-toolbar mdui-color-theme">
-        <a class="mdui-typo-title">Status</a>
-    </div>
-    <br/>
-    <div class="mdui-container doc-container" style='max-width:85%'>
+<div class="mdui-toolbar mdui-color-theme">
+    <a class="mdui-typo-title">Status</a>
+</div>
+<br />
+<div class="mdui-container doc-container" style='max-width:85%'>
     <div class="mdui-typo">
-    <div class="mdui-table-fluid">
-        <table class="mdui-table">
-            <tbody>
-            <tr>
-                <td>运行天数</td>
-                <td><?php $status->getRuntime(); ?>天</td>
-            </tr>
-            <tr>
-                <td>已发送</td>
-                <td><?php $row->getRow("sent"); ?>封</td>
-            </tr>
-            <tr>
-                <td>待发送</td>
-                <td><?php $row->getRow("waiting"); ?>封</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-<?php require_once "footer.php"; ?>
+        <div class="mdui-table-fluid">
+            <table class="mdui-table">
+                <tbody>
+                    <tr>
+                        <td>运行天数</td>
+                        <td><?php $status->getRuntime(); ?>天</td>
+                    </tr>
+                    <tr>
+                        <td>已发送</td>
+                        <td><?php $row->getRow("sent"); ?>封</td>
+                    </tr>
+                    <tr>
+                        <td>待发送</td>
+                        <td><?php $row->getRow("waiting"); ?>封</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <?php require_once "footer.php"; ?>
