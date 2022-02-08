@@ -8,8 +8,17 @@
 
 <style>
 /*编辑器自适应高度*/
+#w-e-textarea-1 {
+    min-height: 180px;
+}
+
 .w-e-text-container {
     min-height: 180px;
+}
+
+#status {
+    margin-top: 20px;
+    color: #999;
 }
 </style>
 
@@ -24,10 +33,11 @@
                 placeholder="一封来自<?php echo date("Y") . "年" . date("m") . "月" . date("d") . "日的信件" ?>"
                 class="mdui-textfield-input" type="text" />
         </div>
-        <!-- 取消z-index无法全屏，这里可以水一次进度 -->
-        <div class="mdui-textfield">
+        <!-- z-index全屏 编辑器盒子 -->
+        <div class="mdui-textfield" style="z-index:10000">
             <div id="toolbar-container"></div>
             <div id="editor-container"></div>
+            <div id="status"></div>
             <textarea id="content" style="display:none"></textarea>
         </div>
         <div class="mdui-textfield">
@@ -47,8 +57,9 @@ const editorConfig = {
     MENU_CONF: {}
 }
 editorConfig.scroll = false
-editorConfig.placeholder = '请输入内容'
+editorConfig.placeholder = '愿未来不负所期<br/>你想对未来的自己说点什么？？？'
 editorConfig.MENU_CONF['uploadImage'] = {
+    // 插入base64编码的图片
     fieldName: 'index-fileName',
     base64LimitSize: 10 * 1024 * 1024, // 10M 以下插入 base64
 }
@@ -56,8 +67,19 @@ editorConfig.MENU_CONF['uploadImage'] = {
 //编辑器内容、选区变化时的回调函数
 editorConfig.onChange = (editor) => {
     console.log("editor changed")
+    // 网页结构导致div的内容无法被识别，此代码将div的内容实时同步至textarea
     const html = editor.getHtml()
     document.getElementById('content').innerHTML = html
+
+    // 编辑器状态显示代码，字数统计等
+    const selectionText = editor.getSelectionText()
+    const text = editor.getText()
+
+    if(selectionText.length == 0) {
+        document.getElementById("status").innerHTML =`${text.length}个字`
+    } else {
+        document.getElementById("status").innerHTML = `${selectionText.length}/${text.length}个字`
+    }
 }
 
 //编辑器创建时的回调函数
@@ -70,13 +92,13 @@ editorConfig.onCreated = (editor) => {
 const editor = E.createEditor({
     selector: '#editor-container',
     config: editorConfig,
-    mode: 'simple' // 或 'simple' 参考下文
+    mode: 'simple' // 或 'simple'
 })
 // 创建工具栏
 const toolbar = E.createToolbar({
     editor,
     selector: '#toolbar-container',
-    mode: 'simple' // 或 'simple' 参考下文
+    mode: 'simple' // 或 'simple'
 })
 </script>
 
