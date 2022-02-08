@@ -37,7 +37,7 @@ $conns = mysqli_connect(DATABASE[0], DATABASE[1], DATABASE[2], "information_sche
 define("EMAILAPI", URL . "email/emailsend.php");
 
 /*
-  function
+function
 */
 if ($HTTP_SERVER_VARS["HTTP_X_FORWARDED_FOR"]) {
     $ip = $HTTP_SERVER_VARS["HTTP_X_FORWARDED_FOR"];
