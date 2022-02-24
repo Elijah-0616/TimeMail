@@ -116,7 +116,7 @@
 
         //编辑器内容、选区变化时的回调函数
         editorConfig.onChange = (editor) => {
-            document.getElementById("messages").innerHTML = ` `
+            document.getElementById("messages").innerHTML = `&nbsp`
             // 网页结构导致div的内容无法被识别，此代码将div的内容实时同步至textarea
             const html = editor.getHtml()
             document.getElementById('content').innerHTML = html
