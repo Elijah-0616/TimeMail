@@ -12,12 +12,12 @@ define("TITLE", "TimeMail - 给未来写封信");
 
 define('EMAIL_SET', array(
     'key' => 'rand', //随机值
-    'smtp' => 'us2.smtp.mailhostbox.com',   //SMTP 用户名  即邮箱的用户名
-    'email' => 'services-no-reply@ce1estial.tech', //邮箱账户
-    'passwd' => 'YfTxDWz8', //SMTP 密码  部分邮箱是授权码(例如163邮箱)
+    'smtp' => 'your smtp server address',   //SMTP 服务器地址
+    'email' => 'exmail@example.com', //邮箱账户
+    'passwd' => 'your password', //SMTP 密码  部分邮箱是授权码(例如163邮箱)
     'Secure' => 'tls',
-    'setFrom' => 'services-no-reply@ce1estial.tech', //发件人
-    'port' => '587', //服务器端口 25 或者465 具体要看邮箱服务器支持
+    'setFrom' => 'email@example.com', //发件人
+    'port' => '25', //服务器端口 25 或者465 具体要看邮箱服务器支持
     'name' => 'TimeMail - 时光邮局'  //发信名称
 ));
 //邮箱配置
